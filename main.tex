@@ -1,0 +1,43 @@
+\documentclass[12pt]{report}
+
+\usepackage{amsmath} 
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{titlesec}
+% \usepackage{times}
+\usepackage{graphicx}
+\graphicspath{{figures/}}
+\usepackage{algorithm}
+\usepackage{microtype}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage[noend]{algpseudocode}
+\usepackage[estonian, english]{babel}
+
+\titlespacing*{\chapter}{0pt}{-20pt}{40pt}
+\titleformat{\chapter}{\normalfont\bfseries}{\Huge \thechapter.}{20pt}{\Huge}
+
+\newcommand{\argmax}{\operatornamewithlimits{argmax}}
+
+\begin{document}
+
+\input{chapters/title}
+\input{chapters/abstract}
+
+\tableofcontents
+
+\input{chapters/introduction}
+\input{chapters/background}
+\input{chapters/methods}
+\input{chapters/results}
+\input{chapters/conclusion}
+
+\bibliographystyle{apalike}
+\addcontentsline{toc}{chapter}{\bibname}
+\bibliography{bibliography}
+
+\input{chapters/appendices}
+
+\end{document}
